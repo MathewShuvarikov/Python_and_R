@@ -6,7 +6,7 @@ library(psych)
 library(purrr)
 
 # download data
-df <- read_csv('/Users/user/Desktop/df/bank_transactions_2.csv')
+df <- read_csv('path_to_file')
 # glimpse on data
 glimpse(df)
 
