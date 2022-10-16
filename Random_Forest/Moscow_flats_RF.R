@@ -4,7 +4,7 @@ library('readr')
 library("dplyr") 
 library('caret')
 
-df <- read_csv('/Users/user/Desktop/df/flats_moscow.csv') 
+df <- read_csv('path_to_file') 
 df <- df[,-1]
 
 # divide data to train and test sample
