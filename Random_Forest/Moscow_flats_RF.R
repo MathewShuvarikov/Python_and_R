@@ -26,7 +26,7 @@ model_lm <- lm(data = train, log(price) ~ .) # regression model
 yhat_lm <- predict(model_lm, test) # 
 
 mean(abs(y - yhat_lm)/y)# Regression error
-mean(abs(y - yhat_rf)/y)# RF error is lees than Regr error
+mean(abs(y - yhat_rf)/y)# RF error is less than Regr error
 
 
 
