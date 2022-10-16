@@ -17,7 +17,7 @@ set.seed(123)
 
 # function to compute total within-cluster sum of square 
 wss <- function(k) {
-  kmedians(df_train, k, nstart = 10 )$tot.withinss
+  kmeans(df_train, k, nstart = 10 )$tot.withinss
 }
  
 # Compute and plot wss for k = 1 to k = 15
@@ -31,7 +31,7 @@ plot(k.values, wss_values,
      xlab="Number of clusters K",
      ylab="Total within-clusters sum of squares")
 
-km <- kmedians(x = df_train, centers = 5) # train model
+km <- kmeans(x = df_train, centers = 5) # train model
 
 df$cluster <- km$cluster # add cluster to initial data
 df %>% group_by(cluster) %>% summarise(median(gender), median(age), median(acc_balance), median(amount))
