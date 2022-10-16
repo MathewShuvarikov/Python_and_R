@@ -7,27 +7,26 @@ library('caret')
 df <- read_csv('/Users/user/Desktop/df/flats_moscow.csv') 
 df <- df[,-1]
 
-set.seed(42) # для точной воспроизводимости случайного разбиения
+# divide data to train and test sample
+set.seed(42)
 train_n <- createDataPartition(df$price, p = 0.75, list = FALSE)
-head(train_n)  # несколько номеров наблюдений, входящих в обучающую выборку
-
-train <- df[train_n, ]  # отбираем наблюдения с номерами из in_sample
+head(train_n) 
+train <- df[train_n, ]  
 test <- df[-train_n, ] 
 
-set.seed(42) # для точной воспроизводимости случайного леса
+# create model
+set.seed(42) 
 model_rf <- randomForest(data = train, log(price) ~ .)
-summary(model_rf)
 
-y <- log(test$price)
-yhat_rf <- predict(model_rf, test)
-sum((y - yhat_rf)^2)
+# let's compare with regression results
+y <- log(test$price) # prices from test sample
+yhat_rf <- predict(model_rf, test) # random forest prediction
 
-model_lm <- lm(data = train, log(price) ~ .)
-yhat_lm <- predict(model_lm, test)
-sum((y - yhat_lm)^2)
+model_lm <- lm(data = train, log(price) ~ .) # regression model
+yhat_lm <- predict(model_lm, test) # 
 
-mean(abs(y - yhat_lm)/y)
-mean(abs(y - yhat_rf)/y)#ошибка меньше, чем у регрессии
+mean(abs(y - yhat_lm)/y)# Regression error
+mean(abs(y - yhat_rf)/y)# RF error is lees than Regr error
 
 
 
