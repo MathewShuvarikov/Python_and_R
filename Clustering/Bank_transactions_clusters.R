@@ -20,8 +20,8 @@ wss <- function(k) {
   kmeans(df_train, k, nstart = 10 )$tot.withinss
 }
  
-# Compute and plot wss for k = 1 to k = 15
-k.values <- c(1:15)
+# Compute and plot wss for k from 2 to 15
+k.values <- c(2:15)
 
 # extract wss for 2-15 clusters
 wss_values <- map_dbl(k.values, wss)
