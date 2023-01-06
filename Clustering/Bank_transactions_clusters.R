@@ -6,7 +6,7 @@ library(psych)
 library(purrr)
 
 # download data
-df <- read_csv('/Users/user/Desktop/df/bank_transactions_2.csv')
+df <- read_csv('path_to_file')
 # glimpse on data
 glimpse(df)
 
@@ -17,11 +17,11 @@ set.seed(123)
 
 # function to compute total within-cluster sum of square 
 wss <- function(k) {
-  kmedians(df_train, k, nstart = 10 )$tot.withinss
+  kmeans(df_train, k, nstart = 10 )$tot.withinss
 }
  
-# Compute and plot wss for k = 1 to k = 15
-k.values <- c(1:15)
+# Compute and plot wss for k from 2 to 15
+k.values <- c(2:15)
 
 # extract wss for 2-15 clusters
 wss_values <- map_dbl(k.values, wss)
@@ -31,7 +31,7 @@ plot(k.values, wss_values,
      xlab="Number of clusters K",
      ylab="Total within-clusters sum of squares")
 
-km <- kmedians(x = df_train, centers = 5) # train model
+km <- kmeans(x = df_train, centers = 5) # train model
 
 df$cluster <- km$cluster # add cluster to initial data
 df %>% group_by(cluster) %>% summarise(median(gender), median(age), median(acc_balance), median(amount))

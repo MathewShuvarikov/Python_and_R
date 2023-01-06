@@ -11,7 +11,7 @@ library(psych)
 library(sandwich)
 
 # download data
-df <- read.csv("/Users/user/Desktop/df/RossmannStoreSales.csv")
+df <- read.csv("path_to_file")
 
 # glimpse of data and remain only necessary columns 
 glimpse(df)
