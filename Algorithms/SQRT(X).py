@@ -1,4 +1,4 @@
-# найти квадратный корень числа (целую часть) без использования степеней
+# find the square root of a number (integer part) without using degrees
 
 x = int(input())
 

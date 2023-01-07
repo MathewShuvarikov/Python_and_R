@@ -1,5 +1,5 @@
-# задача: задано множество из n точек в двухмерном пространстве (список из n turples размера 2)
-# нужно проверить, существует ли для множества этих точек вертикальная ось симметрии
+# task: given a set of n points in a two-dimensional space (a list of n turtles of size 2)
+# it is necessary to check whether there is a vertical axis of symmetry for the set of these points
 
 t1 = (1, 3)
 t2 = (3, 5)

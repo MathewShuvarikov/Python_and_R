@@ -1,4 +1,4 @@
-# определить, является ли число палиндромом
+# to determine if a number is a palindrome
 
 s = str(input())
 rez = 1

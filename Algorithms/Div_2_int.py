@@ -1,5 +1,5 @@
-# поделить нацело одно число на другое, не используя деление, умножение и т.д.
-# ищем только целую часть числа
+# divide one number completely by another, without using division, multiplication, etc.
+# looking for only the integer part of the number
 
 dividend = int(input())
 divisor = int(input())

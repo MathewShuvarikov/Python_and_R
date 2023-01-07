@@ -1,5 +1,5 @@
-# есть лестница, можно пройти либо 1 ступень, либо 2
-# в зависимости от кол-ва ступеней, какое кол-во способов существует
+# there is a ladder, you can go either 1 step or 2
+# depending on the number of steps, what number of ways there are
 
 n = int(input())
 
