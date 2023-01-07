@@ -1,3 +1,4 @@
+# Moscow flats dataset, I will compare the accuracy of prediction of linear regression and of random forest
 library("randomForest")
 library("ggplot2")
 library('readr')
