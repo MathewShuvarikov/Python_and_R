@@ -18,13 +18,13 @@ head(train_n)
 train <- df[train_n, ]  
 test <- df[-train_n, ] 
 
-cor(train) #There are strong correlations between price and totsp and price livesp
+cor(train) #There are strong correlations between price and totsp, and price and livesp
 
 #Let's build scatter plots
 qplot(x = train$totsp, y=train$price) + geom_smooth(method = 'lm')
 qplot(x = train$livesp, y=train$price) + geom_smooth(method = 'lm')
 
-# let's use natural logs of variables, plots look much better that previous ones
+# let's use natural logs of variables, plots look much better than previous ones
 qplot(x = log(train$totsp), y=log(train$price)) + geom_smooth(method = 'lm')
 qplot(x = log(train$livesp), y=log(train$price)) + geom_smooth(method = 'lm')
 
