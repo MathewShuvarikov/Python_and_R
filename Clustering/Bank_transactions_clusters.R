@@ -41,6 +41,6 @@ df %>% group_by(cluster) %>% summarise(median(gender), median(age), median(acc_b
 #4: 33 year old women with 17 848 rupies account balance, and median transaction for 490 rupies. 
 #5: 36 year old men with 15 159 rupies account balance, and median transaction for 396 rupies.
 
-# slightly different desults in Python and R, but commonly clusters from both python and r are similar.
+# slightly different results in Python and R, but clusters from both python and r are generally similar.
 
 
