@@ -88,11 +88,11 @@ gar_pred <- garch_log_forecast(forecast = f.sgarch, alpha = 0.05, test = test$Va
 plot(x = c(1:nrow(train)), y = log(train$Value), type='line', ylim = c(8,(log(train$Value[nrow(train)]))+0.5), xlim = c(40,nrow(df)),
      ylab='log GDP', xlab='time', main='The US GDP prediction')
 lines(x = c((nrow(train)+1):nrow(df)), y = log(test$Value), col='red')
-lines(x = c((nrow(train)+1):nrow(df)), y = log(gar_pred$fitted), col='blue')
+lines(x = c((nrow(train)+1):nrow(df)), y = log(gar_pred$forecast), col='blue')
 lines(x = c((nrow(train)+1):nrow(df)), y = log(gar_pred$upper), col='dark green')
 lines(x = c((nrow(train)+1):nrow(df)), y = log(gar_pred$lower), col='dark green')
 
-mape(test$Value, gar_pred$fitted)
+mape(test$Value, gar_pred$forecast)
 #All the real test GDP values are in predictive intervals, so garch model is statistically adequate
 #Moreover, mape of forecast is incomparably better than that of other models, so garch is the best model in this particular case
 
@@ -108,7 +108,7 @@ garch_pred2 <- garch_log_forecast_outtest(forecast = f.sgarch2, alpha = 0.2, h =
 plot(x = c(1:nrow(train)), y = log(train$Value), type='line', ylim = c(8,(log(df$Value[nrow(df)]))+0.5), xlim = c(40,nrow(df)),
      ylab='log GDP', xlab='time', main='The US GDP prediction')
 lines(x = c((nrow(train)+1):nrow(df)), y = log(test$Value), col='red')
-lines(x = c((nrow(train)+1):nrow(df)), y = log(gar_pred$fitted), col='blue')
+lines(x = c((nrow(train)+1):nrow(df)), y = log(gar_pred$forecast), col='blue')
 lines(x = c((nrow(train)+1):nrow(df)), y = log(gar_pred$upper), col='dark green')
 lines(x = c((nrow(train)+1):nrow(df)), y = log(gar_pred$lower), col='dark green')
 
