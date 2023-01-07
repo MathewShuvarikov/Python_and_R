@@ -1,3 +1,4 @@
+# I analyze bank transactions in India
 # download necessary libraries
 library(readr)
 library(ggplot2)

@@ -1,4 +1,4 @@
-# Sales in Rossmann Stores
+# I analyze sales in Rossmann Stores, using regression
 # load necessary libraries
 library(readr)
 library(lmtest)
