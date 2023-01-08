@@ -1,3 +1,4 @@
+# I model the US GDP, using time series analysis
 # import necessary libraries
 library(Quandl)
 library(forecast)
@@ -115,5 +116,5 @@ lines(x = c((nrow(train)+1):nrow(df)), y = log(gar_pred$lower), col='dark green'
 garch_pred2
 #As we see, according to the model, 
 #the US GDP will be 25058 bln dollars in 2022, 26257.17 bln in 2023, 27545.39 bln in 2024
-# the results are slightly different from those from python, but overall pattern remains
+# the results are slightly different from those from python, but overall pattern remains constant
 
