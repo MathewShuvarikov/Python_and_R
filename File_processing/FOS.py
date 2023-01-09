@@ -39,7 +39,7 @@ dict = pd.read_excel("path_to_mapping_file") # upload file with mapping
 output = pd.merge(output, dict, left_on='Тип', right_on='before') # merge dataframe and mapping
 output = output.drop(columns=['Тип', 'before']) # drop unnecessary columns
 output = output.rename(columns = {'after': "Вид"}) # rename columns
-grouped = output.groupby(['Вид', 'Период'])['Сумма'].sum().unstack().reset_index().fillna(0) # create anouther table which is convenient to analysis
+grouped = output.groupby(['Вид', 'Период'])['Сумма'].sum().unstack().reset_index().fillna(0) # create anouther table which is convenient to analyze
 
 with pd.ExcelWriter("path_out") as writer: # we write two tables on different sheets of the same excel file
     output.to_excel(writer, sheet_name='общаяя выгрузка', index=False)
