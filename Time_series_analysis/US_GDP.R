@@ -54,7 +54,7 @@ coeftest(model2)
 
 # forecast from model_1, predictive intervals and mape of the prediction
 f1 <- forecast(model1, h = nrow(test))
-plot(f1, xlim = c(40, nrow(df)), ylim = c(8, 10.5))
+plot(f1, xlim = c(50, nrow(df)), ylim = c(8.5, 10.5))
 lines(y=log(test$Value), x=c((nrow(train)+1):(nrow(train)+nrow(test))), col='red')
 mape(test$Value, exp(f1$mean))
 #All the read test GDP values are in predictive intervals, so model_1 is statistically adequate
@@ -62,7 +62,7 @@ mape(test$Value, exp(f1$mean))
 
 # forecast from model_2, predictive intervals and mape of the prediction
 f2 <- forecast(model2, h = nrow(test))
-plot(f2, xlim = c(40, nrow(df)), ylim = c(8, 10.5))
+plot(f2, xlim = c(40, nrow(df)), ylim = c(8.5, 10.5))
 lines(y=log(test$Value), x=c((nrow(train)+1):(nrow(train)+nrow(test))), col='red')
 mape(test$Value, exp(f2$mean))
 #All the read test GDP values are in predictive intervals, so model_2 is statistically adequate
@@ -86,7 +86,7 @@ f.sgarch <- ugarchforecast(fit_garch, n.ahead = nrow(test))
 gar_pred <- garch_log_forecast(forecast = f.sgarch, alpha = 0.05, test = test$Value, train = train$Value)
 
 # plot the forecast
-plot(x = c(1:nrow(train)), y = log(train$Value), type='line', ylim = c(8,(log(train$Value[nrow(train)]))+0.5), xlim = c(40,nrow(df)),
+plot(x = c(1:nrow(train)), y = log(train$Value), type='line', ylim = c(8.5,(log(train$Value[nrow(train)]))+0.5), xlim = c(40,nrow(df)),
      ylab='log GDP', xlab='time', main='The US GDP prediction')
 lines(x = c((nrow(train)+1):nrow(df)), y = log(test$Value), col='red')
 lines(x = c((nrow(train)+1):nrow(df)), y = log(gar_pred$forecast), col='blue')
@@ -105,13 +105,13 @@ fit_garch2 <- ugarchfit(spec = garch_spec, data = diff(log(df$Value)))
 fit_garch2
 f.sgarch2 <- ugarchforecast(fit_garch, n.ahead = 3)
 
-garch_pred2 <- garch_log_forecast_outtest(forecast = f.sgarch2, alpha = 0.2, h = 3, train = df$Value)
+garch_pred2 <- garch_log_forecast_outtest(forecast = f.sgarch2, alpha = 0.05, h = 3, train = df$Value)
 plot(x = c(1:nrow(train)), y = log(train$Value), type='line', ylim = c(8,(log(df$Value[nrow(df)]))+0.5), xlim = c(40,nrow(df)),
      ylab='log GDP', xlab='time', main='The US GDP prediction')
 lines(x = c((nrow(train)+1):nrow(df)), y = log(test$Value), col='red')
-lines(x = c((nrow(train)+1):nrow(df)), y = log(gar_pred$forecast), col='blue')
-lines(x = c((nrow(train)+1):nrow(df)), y = log(gar_pred$upper), col='dark green')
-lines(x = c((nrow(train)+1):nrow(df)), y = log(gar_pred$lower), col='dark green')
+lines(x = c((nrow(train)+1):nrow(df)), y = log(garch_pred2$forecast), col='blue')
+lines(x = c((nrow(train)+1):nrow(df)), y = log(garch_pred2$upper), col='dark green')
+lines(x = c((nrow(train)+1):nrow(df)), y = log(garch_pred2$lower), col='dark green')
 
 garch_pred2
 #As we see, according to the model, 
