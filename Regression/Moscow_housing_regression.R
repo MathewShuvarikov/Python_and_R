@@ -9,7 +9,7 @@ library(fastDummies)
 library(caret)
 
 # download the dataset
-df <- read.csv('~/Desktop/df/flats_moscow.csv')
+df <- read.csv('path_to_file')
 # drop unnecessary column
 df <- df[,-1]
 
