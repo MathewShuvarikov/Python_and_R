@@ -16,10 +16,16 @@
 <p style="font-size: 18px; text-align: center">In this repo you may find:</p>
 
 <ul style="list-style-type: disc; text-align: center;">
-    <li>Folder 1</li>
-    <li>Folder 2</li>
-    <li>Folder 3</li>
-    <!-- Добавьте другие папки по мере необходимости -->
+    <li>Algorithms. Here you find my solutions to some Leetcode and Interview problems.</li>
+    <li>Boosting. Classic boosting application to Kaggle datasets.</li>
+    <li>Clustering. K-means and DBSCAN.</li>
+    <li>File_processing. Processing of intricate files.</li>
+    <li>NeuralNets. Applying Neural networks to real-world cases.</li>
+    <li>Optimization. Optimization of ML-model using Optuna, GridSearch and etc.</li>
+    <li>Random_Forest. Example of a classic Random Forest algorithm.</li>
+    <li>Regression. Classic econometric and ML tools for regression tasks.</li>
+    <li>Time_series_analysis. Classic econometric and statistical TSA.</li>
+
 </ul>
 
 
