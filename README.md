@@ -16,16 +16,16 @@
 <p style="font-size: 18px; text-align: center">In this repo you may find:</p>
 
 <ul style="list-style-type: disc; text-align: center;">
-    <li>Algorithms. Here you find my solutions to some Leetcode and Interview problems.</li>
-    <li>Boosting. Classic boosting application to Kaggle datasets.</li>
-    <li>Clustering. K-means and DBSCAN.</li>
-    <li>File_processing. Processing of intricate files.</li>
-    <li>NeuralNets. Applying Neural networks to real-world cases.</li>
-    <li>Optimization. Optimization of ML-model using Optuna, GridSearch and etc.</li>
-    <li>Random_Forest. Example of a classic Random Forest algorithm.</li>
-    <li>Regression. Classic econometric and ML tools for regression tasks.</li>
-    <li>Time_series_analysis. Classic econometric and statistical TSA.</li>
-
+    <li><strong>Algorithms.</strong> Here you find my solutions to some Leetcode and Interview problems.</li>
+    <li><strong>Boosting.</strong> Classic boosting application to Kaggle datasets.</li>
+    <li><strong>Clustering.</strong> K-means and DBSCAN.</li>
+    <li><strong>File_processing.</strong> Processing of intricate files.</li>
+    <li><strong>NeuralNets.</strong> Applying Neural networks to real-world cases.</li>
+    <li><strong>Optimization.</strong> Optimization of ML-model using Optuna, GridSearch and etc.</li>
+    <li><strong>Random_Forest.</strong> Example of a classic Random Forest algorithm.</li>
+    <li><strong>Regression.</strong> Classic econometric and ML tools for regression tasks.</li>
+    <li><strong>Time_series_analysis.</strong> Classic econometric and statistical TSA.</li>
 </ul>
+
 
 
