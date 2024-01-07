@@ -9,7 +9,7 @@
 <hr/>
 <h3>Languages used in the repo</h3>
 <div class="image-container">
-    <img src="https://splunkable.com/wp-content/uploads/2023/03/Python-Symbol-300x169.png" width="80" height="55"/>
+    <img src="https://lamcdn.net/lookatme.ru/post-og_image/PZWCGcd7HqaHizrqp_pg5A.jpg" width="130" height="80"/>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1024px-R_logo.svg.png" width="50" height="50"/>
 </div>
 <hr/>
