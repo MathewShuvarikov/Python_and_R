@@ -4,7 +4,7 @@
 </div>
 <hr/>
 <h1 style="text-align: center">Hello, dear colleagues and enthusiasts!</h1>
-<p style="font-size: 18px; text-align: center">My name is Matvey Shuvarikov. I'm a Junior Data Scientist, and this is my repo with examples of my code.
+<p style="font-size: 18px; text-align: center">My name is Matvey Shuvarikov. I'm a Data Scientist, and this is my repo with examples of my code.
 </p>
 <hr/>
 <h3>Languages used in the repo</h3>
