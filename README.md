@@ -1,6 +1,6 @@
 <p></p>
 <div id="header" align="center">
-<img src="https://github.com/MathewShuvarikov/MathewShuvarikov/blob/main/data-science-new-banner.jpg" width="150"/>
+<img src="https://github.com/MathewShuvarikov/MathewShuvarikov/blob/main/data-science-new-banner.jpg" width="400" height="240"/>
 </div>
 <hr/>
 <h1 style="text-align: center">Hello, dear colleagues and enthusiasts!</h1>
