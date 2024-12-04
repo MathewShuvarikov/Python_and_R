@@ -23,9 +23,6 @@
     <li><strong><a href="https://github.com/MathewShuvarikov/Python_and_R/tree/master/Optimization">Optimization</a></strong> Optimization of ML-model using Optuna, GridSearch and etc.</li>
     <li><strong><a href="https://github.com/MathewShuvarikov/Python_and_R/tree/master/Random_Forest">Random_Forest</a></strong> Example of a classic Random Forest algorithm.</li>
     <li><strong><a href="https://github.com/MathewShuvarikov/Python_and_R/tree/master/Regression">Regression</a></strong> Classic econometric and ML tools for regression tasks.</li>
+    <li><strong><a href="https://github.com/MathewShuvarikov/Python_and_R/tree/master/Statistics">Statistics</a></strong> Statistics applications and hand-made functions.</li>
     <li><strong><a href="https://github.com/MathewShuvarikov/Python_and_R/tree/master/Time_series_analysis">Time_series_analysis</a></strong> Classic econometric and statistical TSA.</li>
 </ul>
-
-
-
-
