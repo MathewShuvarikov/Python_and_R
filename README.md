@@ -9,8 +9,8 @@
 <hr/>
 <h3>Languages used in the repo</h3>
 <div class="image-container">
-    <img src="https://lamcdn.net/lookatme.ru/post-og_image/PZWCGcd7HqaHizrqp_pg5A.jpg" width="130" height="80"/>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1024px-R_logo.svg.png" width="100" height="70"/>
+    <img src="https://github.com/MathewShuvarikov/MathewShuvarikov/blob/main/python-logo-only.png" width="130" height="80"/>
+    <img src="https://github.com/MathewShuvarikov/MathewShuvarikov/blob/main/R_symbol.png" width="100" height="70"/>
 </div>
 <hr/>
 <p style="font-size: 18px; text-align: center">In this repo you may find:</p>
