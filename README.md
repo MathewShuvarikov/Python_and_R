@@ -9,7 +9,7 @@
 <hr/>
 <h3>Languages used in the repo</h3>
 <div class="image-container">
-    <img src="https://github.com/MathewShuvarikov/MathewShuvarikov/blob/main/python-logo-only.png" width="130" height="80"/>
+    <img src="https://github.com/MathewShuvarikov/MathewShuvarikov/blob/main/python-logo-only.png" width="90" height="90"/>
     <img src="https://github.com/MathewShuvarikov/MathewShuvarikov/blob/main/R_symbol.png" width="100" height="70"/>
 </div>
 <hr/>
