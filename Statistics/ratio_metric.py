@@ -29,7 +29,7 @@ def power_ratio_metric(df=None, X_col=None, Y_col=None, alpha=0.05, beta=0.2, md
     cov_x_y = df[[X_col, Y_col]].cov().iloc[0, 1]
 
     f_return = None
-    var_xy = 1/mu_y**2 * var_x - 2 * cov_x_y * mu_x/mu_y**3 + mu_x**2/mu_y**4 * var_y
+    var_xy = (1/mu_y**2 * var_x - 2 * cov_x_y * mu_x/mu_y**3 + mu_x**2/mu_y**4 * var_y)
 
     if nobs is None:
         n = (norm.ppf(1-alpha/2)+norm.ppf(1-beta))**2 * var_xy*2 / mde**2
@@ -61,7 +61,7 @@ def ratio_t_test(control_df=None, pilot_df=None, x_col=None, y_col=None, alterna
     var_y_pilot= pilot_df[y_col].var()
     cov_x_y_pilot = pilot_df[[x_col, y_col]].cov().iloc[0,1]
 
-    var_xy_pilot = 1/mu_y_pilot**2 * var_x_pilot - 2 * cov_x_y_pilot * mu_x_pilot/mu_y_pilot**3 + mu_x_pilot**2/mu_y_pilot**4 * var_y_pilot
+    var_xy_pilot = (1/mu_y_pilot**2 * var_x_pilot - 2 * cov_x_y_pilot * mu_x_pilot/mu_y_pilot**3 + mu_x_pilot**2/mu_y_pilot**4 * var_y_pilot) * 1/pilot_df.shape[0]
     pilot_metric = mu_x_pilot/mu_y_pilot
    
     # control
@@ -71,7 +71,7 @@ def ratio_t_test(control_df=None, pilot_df=None, x_col=None, y_col=None, alterna
     var_y_control= control_df[y_col].var()
     cov_x_y_control = control_df[[x_col, y_col]].cov().iloc[0,1]
 
-    var_xy_control = 1/mu_y_control**2 * var_x_control - 2 * cov_x_y_control * mu_x_control/mu_y_control**3 + mu_x_control**2/mu_y_control**4 * var_y_control
+    var_xy_control = (1/mu_y_control**2 * var_x_control - 2 * cov_x_y_control * mu_x_control/mu_y_control**3 + mu_x_control**2/mu_y_control**4 * var_y_control)* 1/control_df.shape[0]
 
     control_metric = mu_x_control/mu_y_control
 
